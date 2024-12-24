@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Chat AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="header">
+            <h1>Panel de Administración</h1>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Sesiones Activas</h3>
+                <div class="value" id="active-sessions">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total de Mensajes</h3>
+                <div class="value" id="total-messages">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Modelos en Uso</h3>
+                <div class="value" id="active-models">0</div>
+            </div>
+        </div>
+
+        <div class="sessions-list" id="sessions-container">
+            <!-- Las sesiones se cargarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <button class="refresh-btn" id="refresh-btn">
+        ↻
+    </button>
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>
