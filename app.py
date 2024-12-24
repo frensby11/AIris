@@ -94,7 +94,7 @@ def save_question_count(count):
 @app.route('/')
 def index():
     user_agent = request.headers.get('User-Agent', '').lower()
-    if 'chrome' not in user_agent:
+    if 'median' not in user_agent:
         return render_template('403.html', message="Acceso restringido al Samsung A71."), 403
     
     user_id = get_user_identifier()
