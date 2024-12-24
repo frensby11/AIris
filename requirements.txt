@@ -21,6 +21,7 @@ google-generativeai==0.8.3
 googleapis-common-protos==1.66.0
 grpcio==1.68.1
 grpcio-status==1.68.1
+gunicorn==23.0.0
 httplib2==0.22.0
 idna==3.10
 itsdangerous==2.2.0
